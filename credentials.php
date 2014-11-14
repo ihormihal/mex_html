@@ -68,38 +68,8 @@
       <a class="link" href="cases.php"><h2 class="text-center"><i class="open-btn"></i> Кейсы</h2></a>
       <div class="clearfix"></div>
 
-       <div class="col-md-6">
-
-        <div class="case-item">
-          <div class="image">
-            <img src="http://placehold.it/300x200" alt="">
-          </div>
-          <div class="case-info">
-            <div class="title">Проект "FIT SWEET" для спорт-клуба "Фитнес академия"</div>
-            <div class="description">
-              Лучшее использование нестандартных рекламоносителей в промо-компаниях
-            </div>
-            <div class="place">2 место</div>
-            <div class="competition">Премия "Серебрянный Меркурий" 2014</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-6">
-        <div class="case-item">
-          <div class="image">
-            <img src="http://placehold.it/300x200" alt="">
-          </div>
-          <div class="case-info">
-            <div class="title">Проект "FIT SWEET" для спорт-клуба "Фитнес академия"</div>
-            <div class="description">
-              Лучшее использование нестандартных рекламоносителей в промо-компаниях
-            </div>
-            <div class="place">2 место</div>
-            <div class="competition">Премия "Серебрянный Меркурий" 2014</div>
-          </div>
-        </div>
-      </div>
+        <?php include('chunks/case-item.php'); ?>    
+        <?php include('chunks/case-item.php'); ?>
 
     </div>
     

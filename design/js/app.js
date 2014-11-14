@@ -83,8 +83,36 @@ $(function () {
 		//run fulter
 		portfolioFilter(selected);
 	});
+
+	if($('#mex-map').length > 0){
+		var lat = $('#mex-map').attr('data-lat');
+		var lng = $('#mex-map').attr('data-lng');
+		var marker = $('#mex-map').attr('data-marker');
+		var zoom = parseInt($('#mex-map').attr('data-zoom'));
+		googleMaps(lat,lng,zoom,marker);
+	}
 });
 
 function portfolioFilter(category){
 	console.log(category);
+}
+
+function googleMaps(lat,lng,zoom,marker) {
+    var latlng = new google.maps.LatLng(lat,lng);
+    var myOptions = {
+        zoom: zoom,
+        center: latlng,
+        zoomControl: true,
+        mapTypeControl: false,
+        streetViewControl: false,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("mex-map"), myOptions);
+
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        icon: marker
+    });
 }
